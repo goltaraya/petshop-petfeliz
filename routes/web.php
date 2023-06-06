@@ -42,3 +42,6 @@ Route::prefix('/app')->group(function(){
 Route::fallback(function (string $nome){
     return "Rota acessada ($nome) não existe.";
 })->name('fallback');
+
+Route::get('/teste/{p1}/{p2}', 'App\\Http\\Controllers\\TesteController@teste')->name('teste');
+
