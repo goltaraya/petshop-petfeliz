@@ -18,23 +18,29 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="{{ asset('img/loja-de-animais.png') }}" alt="Pet shop logo"
+            <a class="navbar-brand" href="/"><img src="{{ asset('img/loja-de-animais.png') }}" alt="Pet shop logo"
                     id="pet-logo"></a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Início</a>
+                        <a class="nav-link" href="/">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
+                        <a class="nav-link" href="/servicos">Serviços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
+                        <a class="nav-link" href="/sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contato">Contato</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    @yield('content')
+
 </body>
 
 </html>
