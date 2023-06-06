@@ -1,0 +1,16 @@
+* {
+    font-family: 'Roboto';
+}
+
+body {
+    background-color: #4C4C6D;
+}
+
+#pet-logo{
+    width: 50px;
+}
+
+.navbar li{
+    padding-left: 10px ;
+    font-size: 18px;
+}
