@@ -1,12 +1,17 @@
 @extends('templates.main')
 @section('title', 'Home')
 @section('content')
-
+    <header>
+        <div>
+            <h1>Petshop Petfeliz</h1>
+        </div>
+    </header>
     <div class="container">
         <table>
             <tr>
                 <td class="align-items-start">
-                    <img class="welcome-page-img-dog" src="{{ asset('img/welcome-page/cachorro-tela-azul.jpg') }}" alt="">
+                    <img class="welcome-page-img-dog" src="{{ asset('img/welcome-page/cachorro-tela-azul.jpg') }}"
+                        alt="">
                 </td>
                 <td class="p-table">
                     <p>
@@ -39,7 +44,8 @@
                     </p>
                 </td>
                 <td>
-                    <img class="welcome-page-img-cat" src="{{ asset('img/welcome-page/gatinho-siames-tela-amarela.jpg') }}" alt="">
+                    <img class="welcome-page-img-cat" src="{{ asset('img/welcome-page/gatinho-siames-tela-amarela.jpg') }}"
+                        alt="">
                 </td>
             </tr>
         </table>

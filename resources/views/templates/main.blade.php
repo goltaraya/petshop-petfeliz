@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="/"><img src="{{ asset('img/loja-de-animais.png') }}" alt="Pet shop logo"
                     id="pet-logo"></a>
@@ -32,7 +32,7 @@
                         <a class="nav-link" href="{{ route('app.clients') }}">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('app.pacients') }}">Pacientes</a>
+                        <a class="nav-link" href="{{ route('app.pacients.index') }}">Pacientes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('site.login') }}">Login</a>
@@ -41,8 +41,9 @@
             </div>
         </div>
     </nav>
-
-    @yield('content')
+    <div class="container-md main-frame">
+        @yield('content')
+    </div>
 
 </body>
 

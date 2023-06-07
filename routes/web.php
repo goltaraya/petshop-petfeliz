@@ -18,7 +18,7 @@ use App\Http\Controllers\PacientController;
 Route::get('/', function () {
     return view('site.welcome');
 })->name('site.index');
-;
+
 
 Route::get('/contato', function () {
     return view('site.contact');
@@ -29,7 +29,12 @@ Route::get('/login', function () {
 })->name('site.login');
 
 Route::prefix('/app')->group(function(){
-    Route::get('/pacientes', [PacientController::class, 'index'])->name('app.pacients');
+    Route::prefix('/pacientes')->group(function(){
+        Route::get('/', [PacientController::class, 'index'])->name('app.pacients.index');
+        Route::get('/criar', [PacientController::class, 'create'])->name('app.pacients.create');
+        Route::post('/', [PacientController::class, 'store'])->name('app.pacients.store');
+    });
+
     Route::get('/clientes', function(){ return view('app.clients'); })->name('app.clients');
 });
 
