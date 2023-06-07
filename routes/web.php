@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PacientController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,32 +18,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('site.welcome');
 })->name('site.index');
-
-Route::get('/sobre', function () {
-    return view('site.about');
-})->name('site.about');
+;
 
 Route::get('/contato', function () {
     return view('site.contact');
 })->name('site.contact');
 
-Route::get('/servicos', function () {
-    return view('site.services');
-})->name('site.services');
-
 Route::get('/login', function () {
-    return 'Login';
+    return view('site.login');
 })->name('site.login');
 
 Route::prefix('/app')->group(function(){
-    Route::get('/pacientes', function(){ return 'Pacientes'; })->name('app.pacients');
-    Route::get('/clientes', function(){ return 'Clientes'; })->name('app.clients');
-    Route::get('/produtos', function(){ return 'Produtos'; })->name('app.products');
+    Route::get('/pacientes', [PacientController::class, 'index'])->name('app.pacients');
+    Route::get('/clientes', function(){ return view('app.clients'); })->name('app.clients');
 });
 
 Route::fallback(function (string $nome){
     return "Rota acessada ($nome) não existe.";
 })->name('fallback');
-
-Route::get('/teste/{p1}/{p2}', 'App\\Http\\Controllers\\TesteController@teste')->name('teste');
-

@@ -26,13 +26,16 @@
                         <a class="nav-link" href="{{ route('site.index') }}">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('site.services') }}">Serviços</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('site.about') }} ">Sobre</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('site.contact') }}">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('app.clients') }}">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('app.pacients') }}">Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('site.login') }}">Login</a>
                     </li>
                 </ul>
             </div>
