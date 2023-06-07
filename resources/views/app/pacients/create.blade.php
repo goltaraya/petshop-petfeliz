@@ -33,7 +33,8 @@
             </div>
             <div class="mb-3">
                 <label for="observation" class="form-label">Observação</label>
-                <textarea class="form-control" id="observation" rows="3"></textarea>
+                <textarea class="form-control" id="observation" rows="3" value="Default"></textarea>
+
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
