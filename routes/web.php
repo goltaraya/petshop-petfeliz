@@ -33,6 +33,7 @@ Route::prefix('/app')->group(function(){
         Route::get('/', [PacientController::class, 'index'])->name('app.pacients.index');
         Route::get('/criar', [PacientController::class, 'create'])->name('app.pacients.create');
         Route::post('/', [PacientController::class, 'store'])->name('app.pacients.store');
+        Route::get('/{id}', [PacientController::class, 'show'])->name('app.pacients.show');
     });
 
     Route::get('/clientes', function(){ return view('app.clients'); })->name('app.clients');

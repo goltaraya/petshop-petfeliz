@@ -10,7 +10,9 @@ class PacientController extends Controller
 {
     public function index()
     {
-        return view('app.pacients.index');
+        $pacients = Pacient::all();
+
+        return view('app.pacients.index', compact('pacients'));
     }
     public function create()
     {
@@ -28,7 +30,13 @@ class PacientController extends Controller
 
         $pacient->save();
 
-        return redirect('app.pacient.index')
+        return redirect(route('app.pacients.index'));
     }
 
+    public function show($id)
+    {
+        $pacient = Pacient::findOrFail($id);
+
+        return view('app.pacients.show', compact('pacient'));
+    }
 }
