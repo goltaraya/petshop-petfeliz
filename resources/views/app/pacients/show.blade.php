@@ -16,7 +16,9 @@
         <p>{{ $pacient->species }}</p>
         <h4>Sexo</h4>
         <p>{{ $pacient->gender }}</p>
-        <h4>Observação</h4>
-        <p>{{ $pacient->observation }}</p>
+        @if ($pacient->observation != null || $pacient->observation != '')
+            <h4>Observação</h4>
+            <p>{{ $pacient->observation }}</p>
+        @endif
     </div>
 @endsection
