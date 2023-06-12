@@ -40,8 +40,9 @@ class PacientController extends Controller
         return view('app.pacients.show', compact('pacient'));
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('app.pacients.edit');
+        $pacient = Pacient::findOrFail($id);
+        return view('app.pacients.edit', compact('pacient'));
     }
 }

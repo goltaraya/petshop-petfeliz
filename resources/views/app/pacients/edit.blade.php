@@ -14,7 +14,7 @@
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
-                <input required type="text" class="form-control" id="name" name="name">
+                <input required type="text" class="form-control" id="name" name="name" value="{{$pacient->name}}">
             </div>
             <div class="mb-3">
                 <label for="birth" class="form-label">Data de Nascimento</label>
