@@ -7,6 +7,8 @@
             PACIENTES
         </h1>
     </div>
+    @include('templates.back-button-patient')
+
     <div class="pacient-form">
         <form action="/app/pacientes" method="POST">
             @csrf
@@ -35,7 +37,7 @@
                 <label for="observation" class="form-label">Observação</label>
                 <textarea class="form-control" id="observation" rows="3" name="observation"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn btn-success">Enviar</button>
         </form>
     </div>
 

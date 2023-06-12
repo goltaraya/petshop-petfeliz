@@ -11,12 +11,12 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Espécie</th>
-                    <th scope="col">Data de Nascimento</th>
-                    <th scope="col">Gênero</th>
-                    <th scope="col"></th>
+                    <th scope="col" class="col-1">#</th>
+                    <th scope="col" class="col-2">Nome</th>
+                    <th scope="col" class="col-2">Espécie</th>
+                    <th scope="col" class="col-2">Data de Nascimento</th>
+                    <th scope="col" class="col-2">Gênero</th>
+                    <th scope="col" class="col-1">Opções</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,7 +44,7 @@
 
     <div>
         <a href="{{ route('app.pacients.create') }}">
-            <button class="btn btn-primary">
+            <button class="btn btn-success">
                 Cadastrar
             </button>
         </a>

@@ -7,6 +7,8 @@
             Ficha do Paciente
         </h2>
     </div>
+    @include('templates.back-button-patient')
+
     <div class="patient-information">
         <h4>Nome</h4>
         <p>{{ $pacient->name }}</p>

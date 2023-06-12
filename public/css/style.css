@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #faeee0;
+    background-color: #fff;
 }
 
 #pet-logo {
@@ -11,12 +11,20 @@ body {
 }
 
 nav {
-    background-color: #dbd0c0;
+    background-color: #0079ff;
 }
 
 .navbar li {
     padding-left: 10px;
     font-size: 18px;
+}
+
+.navbar li a {
+    color: #fff;
+}
+
+.navbar li a:hover {
+    color: #d6d6d6;
 }
 
 .welcome-page-img-dog {
@@ -49,4 +57,10 @@ nav {
 }
 .gender-radio-option label {
     margin-right: 10px;
+}
+.back-button {
+    margin: 20px 0;
+}
+.no-patients {
+    margin: 20px 0;
 }
