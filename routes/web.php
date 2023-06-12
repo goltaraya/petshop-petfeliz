@@ -34,6 +34,7 @@ Route::prefix('/app')->group(function(){
         Route::get('/criar', [PacientController::class, 'create'])->name('app.pacients.create');
         Route::post('/', [PacientController::class, 'store'])->name('app.pacients.store');
         Route::get('/{id}', [PacientController::class, 'show'])->name('app.pacients.show');
+        Route::get('/editar/{id}', [PacientController::class, 'edit'])->name('app.pacients.edit');
     });
 
     Route::get('/clientes', function(){ return view('app.clients'); })->name('app.clients');

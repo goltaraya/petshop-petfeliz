@@ -39,4 +39,9 @@ class PacientController extends Controller
 
         return view('app.pacients.show', compact('pacient'));
     }
+
+    public function edit()
+    {
+        return view('app.pacients.edit');
+    }
 }

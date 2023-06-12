@@ -31,6 +31,9 @@
                             <a href="{{ route('app.pacients.show', ['id' => $pacient->id]) }}">
                                 <ion-icon name="eye-outline"></ion-icon>
                             </a>
+                            <a href=" {{route('app.pacients.edit', ['id' => $pacient->id])}}">
+                                <ion-icon name="pencil"></ion-icon>
+                            </a>
                         </td>
                     </tr>
                 @endforeach
@@ -45,7 +48,7 @@
     <div>
         <a href="{{ route('app.pacients.create') }}">
             <button class="btn btn-success">
-                Cadastrar
+                <ion-icon name="add-circle-outline"></ion-icon> Cadastrar
             </button>
         </a>
     </div>
