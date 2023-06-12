@@ -10,7 +10,7 @@
     @include('templates.back-button-patient')
 
     <div class="pacient-form">
-        <form action="/app/pacientes" method="POST">
+        <form action="{{ route('app.pacients.store') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
@@ -18,7 +18,8 @@
             </div>
             <div class="mb-3">
                 <label for="birth" class="form-label">Data de Nascimento</label>
-                <input required type="date" class="form-control" id="birth" name="birth">
+                <br>
+                <input type="date" id="birth" name="birth" required>
             </div>
             <div class="mb-3">
                 <label for="species" class="form-label">Espécie</label>
